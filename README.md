@@ -1,5 +1,5 @@
 ### Manual Setup
-
+Segment Fault is a question and answer website for professional and enthusiast programmers. It features questions and answers on a wide range of topics in computer programming. The website serves as a platform for users to ask and answer questions, and, through membership and active participation, to vote questions and answers up or down . The whole idea is to make learning interactive and efficient.
 1. Open your local CLI -
 
    ```
