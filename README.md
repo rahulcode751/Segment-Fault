@@ -31,7 +31,7 @@
    - Open your Mongoose Client -
 
    ```
-   CREATE DATABASE Segment_Fault;
+   CREATE DATABASE stack_overflow;
    ```
 
    NOTE: Don't forget to keep the database name same in the `.env` and here.
@@ -53,4 +53,4 @@
 
 ## CONTRIBUTOR
 
-### Rahul Bairagi | [📝 LinkedIn](https://www.linkedin.com/in/rahul-bairagi-b88b20165/)
+### Abhinav Kumar | [📝 LinkedIn](https://www.linkedin.com/in/rahul-bairagi-b88b20165/)
