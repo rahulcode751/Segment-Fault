@@ -1,4 +1,4 @@
-Segment Fault is a question and answer website for professional and enthusiast programmers. It features questions and answers on a wide range of topics in computer programming. The website serves as a platform for users to ask and answer questions, and, through membership and active participation, to vote questions and answers up or down . The whole idea is to make learning interactive and efficient.
+Segment Fault is a question and answer website for professional and enthusiast programmers. It features questions and answers on a wide range of topics in computer programming. The website serves as a platform for users to ask and answer questions, and, through membership and active participation, to vote questions and answers up or down.The whole idea is to make learning interactive and efficient.
 ### Manual Setup
 1. Open your local CLI -
 
@@ -51,6 +51,8 @@ Segment Fault is a question and answer website for professional and enthusiast p
 
    - Run the client index `npm start`.
 
-## CONTRIBUTOR
+## Made By
 
 ### Rahul Bairagi | [📝 LinkedIn](https://www.linkedin.com/in/rahul-bairagi-b88b20165/)
+### Pravishti Bhardwaj | [📝 LinkedIn](https://www.linkedin.com/in/pravishti-bhardwaj-7b4042200/)
+### Prathmesh Modhe | [📝 LinkedIn](https://www.linkedin.com/in/pmodhe2001/)
