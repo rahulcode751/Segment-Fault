@@ -21,6 +21,7 @@
 .main-bar-header .ask-btn {
   border: 2px solid rgb(151 40 3);
   background-color: rgb(151, 40, 3);
+  /* // rgb(151, 40, 3); */
   color: white;
   width: 115px;
   height: 35px;
