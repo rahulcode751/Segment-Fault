@@ -20,24 +20,27 @@ const Navbar = () => {
     dispatch(setCurrentUser(null));
   };
 
-  
   useEffect(() => {
-    const token = User?.token
+    const token = User?.token;
     if (token) {
-        const decodedToken = decode(token)
-        if (decodedToken.exp * 1000 < new Date().getTime()) {
-            handleLogout();
-        }
+      const decodedToken = decode(token);
+      if (decodedToken.exp * 1000 < new Date().getTime()) {
+        handleLogout();
+      }
     }
-    dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
-}, [User?.token, dispatch])
+    dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+  }, [User?.token, dispatch]);
 
   return (
     <nav className="main-nav">
       <div className="navbar">
         <Link to="/" className="nav-item nav-logo">
           {/* <img src={logo} alt="logo" /> */}
-          <img src="https://i.ibb.co/sPHrmk6/finallogo.png" alt="logo"  height={"50px"}/>
+          <img
+            src="https://i.ibb.co/sPHrmk6/finallogo.png"
+            alt="logo"
+            height={"50px"}
+          />
         </Link>{" "}
         <Link to="/About" className="about ">
           About

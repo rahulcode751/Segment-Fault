@@ -3,21 +3,39 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config({
-  path:"config.env"
+  path: "config.env"
 });
 
 import userRoutes from './routes/users.js';
 import questionRoutes from './routes/Questions.js';
 import answerRoutes from './routes/Answers.js';
 
+
 const app = express();
+// const corsOptions = {
+//   origin: 'http://localhost:3000',
+//   credentials: true,            //access-control-allow-credentials:true
+//   optionSuccessStatus: 200
+// }
+// app.use(cors(corsOptions));
+
 //dotenv.config();
 app.use(express.json({ limit: '30mb', extended: true }));
 app.use(express.urlencoded({ limit: '30mb', extended: true }));
-app.use(cors());
+const corsOrigin = {
+  origin: true, //or whatever port your frontend is using
+  credentials: true,
+  // optionSuccessStatus: 200
+}
+// app.use(cors({ origin: true, credentials: true }));
+// app.use(cors(corsOrigin));
+app.options('*', cors())
+// app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('This is our Sgment Fault web App api');
+  // res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
+  // res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
+  res.send('This is our Segment Fault web App api');
 });
 
 //alert('User already Exist. ')
