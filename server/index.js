@@ -1,15 +1,14 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import dotenv from 'dotenv';
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
 dotenv.config({
-  path: "config.env"
+  path: "config.env",
 });
 
-import userRoutes from './routes/users.js';
-import questionRoutes from './routes/Questions.js';
-import answerRoutes from './routes/Answers.js';
-
+import userRoutes from "./routes/users.js";
+import questionRoutes from "./routes/Questions.js";
+import answerRoutes from "./routes/Answers.js";
 
 const app = express();
 // const corsOptions = {
@@ -18,31 +17,32 @@ const app = express();
 //   optionSuccessStatus: 200
 // }
 // app.use(cors(corsOptions));
+app.use(cors()); // bydefault it will allow all the request
 
 //dotenv.config();
-app.use(express.json({ limit: '30mb', extended: true }));
-app.use(express.urlencoded({ limit: '30mb', extended: true }));
+app.use(express.json({ limit: "30mb", extended: true }));
+app.use(express.urlencoded({ limit: "30mb", extended: true }));
 const corsOrigin = {
   origin: true, //or whatever port your frontend is using
   credentials: true,
   // optionSuccessStatus: 200
-}
+};
 // app.use(cors({ origin: true, credentials: true }));
 // app.use(cors(corsOrigin));
-app.options('*', cors())
+app.options("*", cors());
 // app.use(cors());
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   // res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
   // res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
-  res.send('This is our Segment Fault web App api');
+  res.send("This is our Segment Fault web App api");
 });
 
 //alert('User already Exist. ')
 
-app.use('/user', userRoutes);
-app.use('/questions', questionRoutes);
-app.use('/answer', answerRoutes);
+app.use("/user", userRoutes);
+app.use("/questions", questionRoutes);
+app.use("/answer", answerRoutes);
 
 const PORT = process.env.PORT || 5000;
 
@@ -53,8 +53,8 @@ app.listen(PORT, () => {
 
   mongoose
     .connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(console.log('Rahul:=> MongoDB is connected successfully'))
-    .catch((err) => console.log('Error: ', err));
+    .then(console.log("Rahul:=> MongoDB is connected successfully"))
+    .catch((err) => console.log("Error: ", err));
 });
 
 // var express = require('express');
